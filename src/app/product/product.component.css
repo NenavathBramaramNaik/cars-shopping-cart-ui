@@ -1,0 +1,14 @@
+.product-wrapper {
+  color: black;
+  padding: 10px;
+  text-align: center;
+}
+
+.product-item img{
+  max-width: 100%;
+  max-height: 200px;
+}
+.fa_custom {
+  color:
+  #0099CC
+  }

@@ -1,0 +1,28 @@
+<div class="cart-wrapper">
+  <div class="panel panel-default">
+    <!-- Default panel contents -->
+    <div class="panel-heading">
+      <div>Vehicle Name</div>
+      <div>Price</div>
+      <div>Quantity</div>
+      <div>Total Price</div>
+      <div></div>
+    </div>
+
+    <!-- Table -->
+    <div class="list-group" style="overflow:scroll; height:150px;">
+          <app-cartitem
+            class="list-group-item"
+            *ngFor="let item of cartItems; let i = index"
+            [cartItem]="item"
+            (cartItemDeleted)="onCartItemDeleted($event)"
+            (cartItemChanged)="onCartItemChanged($event)"
+            >
+          </app-cartitem>
+    </div>
+    <div class="panel-footer">
+      <h4>Total {{ cartTotal | number : '1.2-2'}} EUR</h4>
+    </div>
+  </div>
+</div>
+

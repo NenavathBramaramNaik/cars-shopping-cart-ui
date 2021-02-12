@@ -1,0 +1,23 @@
+<mat-dialog-content>
+  <button class="close" mat-button (click)="close()">x</button>
+<div class="wrapper" *ngIf="item.licensed" >
+
+  <div class="slide">
+    <img src="assets/images/tesla.jpg" width="20%" height="30%">
+  </div>
+  <div class="text">
+    <label class="font-weight-bold"> Make:<h3 >{{ item.make }} </h3></label>
+    <label class="font-weight-bold">Model:<h3>{{ item.model }} </h3></label>
+    <label class="font-weight-bold">Year:<h3>{{ item.year_model }} </h3></label>
+    <label class="font-weight-bold">Price: <h3>{{ item.price }} EUR</h3></label>
+    <label class="font-weight-bold">Description:
+    <h3>{{ item.make }} was formed to develop an electric sports car. ... In 2008 {{ item.make }} Motors released its first car, the completely electric Roadster. In company tests, it achieved 245 miles (394 km) on a single charge, a range unprecedented for a production electric car.</h3></label>
+      <label class="font-weight-bold">Licensed<h3>{{ item.licensed }}</h3></label>
+      <label class="font-weight-bold"> Warehouse<h3>{{ item.warehouse_name }}</h3></label>
+      <label class="font-weight-bold"> Warehouse Location<h3>{{ item.location }}</h3></label>
+  </div>
+</div>
+<div class="slide" *ngIf="!item.licensed" >
+  <h3>This Vehicle is not Licensed.</h3>
+</div>
+</mat-dialog-content>
